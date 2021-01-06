@@ -1,24 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap');
+/* Font Noto Sans */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap");
+/* Font Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
-  --primary-color: rgb(255, 92, 92);
-  --primary-variant: #ff2d2d;
-  --secondary-color: #1b9999;
-  --on-primary: rgb(250, 250, 250);
-  --on-background: rgb(66, 66, 66);
-  --on-background-alt: rgba(66, 66, 66, 0.7);
   --background: rgb(255, 255, 255);
+  --on-background: #15202b;
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+
+  --surface: #ff2d2d;
+  --on-surface: #000000;
+
+  --primary-color: rgb(255, 92, 92);
+  --on-primary: rgb(250, 250, 250);
+
+  --secondary-color: #1b9999;
+  --on-secondary: #ffffff;
   --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+
+  /* Card Color */
+  --green: #1fc11b;
+  --yellow: #ffd913;
+  --orange: #ff9c55;
+  --red: #ff5555;
 }
 
 [data-theme="dark"] {
-  --primary-color: rgb(150, 65, 255);
-  --primary-variant: #6c63ff;
-  --secondary-color: #03dac5;
-  --on-primary: #000;
-  --on-background: rgba(255, 255, 255, 0.9);
+  --background: #15202b;
+  --on-background: #ffffff;
   --on-background-alt: rgba(255, 255, 255, 0.7);
-  --background: #121212;
+
+  --surface: #6c63ff;
+  --on-surface: #8a8a8a;
+
+  --primary-color: #794bc4;
+  --on-primary: #fff111;
+
+  --secondary-color: #03dac5;
+  --on-secondary: #101010;
 }
 
 html {
@@ -30,11 +49,11 @@ body {
   margin: 0;
   color: var(--on-background);
   background-color: var(--background);
-  font-family: Oswald, 'sans-serif';
+  font-family: Montserrat, "sans-serif";
 }
 
 section {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,22 +61,272 @@ section {
 }
 
 h1 {
-  font-family: Noto Sans, 'sans-serif';
+  font-family: Noto Sans, "sans-serif";
   font-size: 100px;
   margin-bottom: 0;
 }
 
 h2 {
-  color: var(--on-background-alt);
+  color: var(--on-background);
   font-size: 32px;
   font-weight: normal;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+h5 {
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+/* Sections */
+
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.introduction-section {
+  display: flex;
+  padding: 0 10%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 10vh;
+}
+
+.left-part {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.left-part p{
+  font-size: 16px;
+}
+
+.right-part {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25%;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-profile {
+  margin-top: 15px;
+}
+
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+/* Card */
+/* Welcome Card */
+.welcome-card {
+  background-color: var(--background);
+  display: block;
+  width: 75%;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+    20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+    30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+    40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  animation: shadow-wave 1s ease infinite;
+}
+/* 
+.welcome-card:hover {
+} */
+
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes shadow-wave {
+  0% {
+    border: 3px solid var(--primary-color);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+      20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+      30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+      40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  20% {
+    border: 3px solid var(--red);
+    box-shadow: 10px -10px 0 -3px var(--background),
+      10px -10px var(--primary-color), 20px -20px 0 -3px var(--background),
+      20px -20px var(--green), 30px -30px 0 -3px var(--background),
+      30px -30px var(--yellow), 40px -40px 0 -3px var(--background),
+      40px -40px var(--orange);
+  }
+  40% {
+    border: 3px solid var(--orange);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red),
+      20px -20px 0 -3px var(--background), 20px -20px var(--primary-color),
+      30px -30px 0 -3px var(--background), 30px -30px var(--green),
+      40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+  }
+  60% {
+    border: 3px solid var(--yellow);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange),
+      20px -20px 0 -3px var(--background), 20px -20px var(--red),
+      30px -30px 0 -3px var(--background), 30px -30px var(--primary-color),
+      40px -40px 0 -3px var(--background), 40px -40px var(--green);
+  }
+  80% {
+    border: 3px solid var(--green);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+      20px -20px 0 -3px var(--background), 20px -20px var(--orange),
+      30px -30px 0 -3px var(--background), 30px -30px var(--red),
+      40px -40px 0 -3px var(--background), 40px -40px var(--primary-color);
+  }
+  100% {
+    border: 3px solid var(--primary-color);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+      20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+      30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+      40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+}
+
+.welcome-card p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.welcome-card h5 {
+  color: var(--on-background);
+  font-weight: bold;
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.welcome-card h2 {
+  font-size: 24px;
+  color: var(--on-background);
+  font-weight: bold;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Projects Card */
+.projects-container {
+  display: flex;
+}
+
+.project {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 700px;
+}
+
+.project h6 {
+  color: #000000;
+  opacity: 0.6;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project h2 {
+  color: #101010;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.project-preview {
+  background-color: #2a265f;
+  color: var(--on-background);
+  padding: 30px;
+  max-width: 250px;
+}
+
+.project-preview a {
+  color: var(--on-background);
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.project-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.btn-visit {
+  background-color: #2a265f;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: var(--on-background);
+  font-size: 16px;
+  padding: 12px 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  letter-spacing: 1px;
 }
 
 /* Navigation */
 nav {
   z-index: 10;
   position: fixed;
-  font-family: Oswald, 'sans-serif';
+  font-family: Oswald, "sans-serif";
   font-size: 24px;
   letter-spacing: 3px;
   padding: 25px;
@@ -66,8 +335,8 @@ nav {
 }
 
 a {
-  margin-right: 25px;
-  color: var(--primary-color);
+  /* margin-right: 25px; */
+  color: var(--on-background);
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
@@ -75,8 +344,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--on-background);
-  border-bottom: 3px solid;
+  color: var(--primary-color);
 }
 
 /* Home Section */
@@ -169,27 +437,32 @@ p {
   margin: 0;
   line-height: 25px;
 }
+/* Icon Size */
+.small-icon {
+  font-size: 40px;
+}
 
 /* Contact Section */
 .fab {
-  font-size: 100px;
-  margin-right: 50px;
+  font-size: 30px;
+  margin-right: 5px;
   cursor: pointer;
-  color: var(--primary-color);
+  color: var(--on-background);
 }
 
 .fab:hover {
-  color: var(--on-background);
+  color: var(--primary-color);
 }
 
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  position: relative;
   z-index: 100;
-  position: fixed;
-  right: 25px;
   top: 30px;
+  right: 30px;
 }
 
 .theme-switch-wrapper span {

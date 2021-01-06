@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Light Dark Mode</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Yanuwar's Github</title>
+    <link
+      rel="icon"
+      type="img/png"
+      href="https://www.google.com/s2/u/0/favicons?domain=yanuwar.space"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
@@ -13,63 +17,99 @@
   </head>
   <body>
     <!-- Dark Mode Switch -->
-    <div class="theme-switch-wrapper">
-      <span class="toggle-icon" id="toggle-icon">
+    <div class="theme-switch-wrapper" onclick="">
+      <div class="toggle-icon" id="toggle-icon">
         <span class="toggle-text" id="toggle-text">Light Mode</span>
         <i class="fas fa-sun"> </i>
-      </span>
+      </div>
       <label class="theme-switch">
         <input type="checkbox" />
         <div class="slider round"></div>
       </label>
     </div>
-    <!-- Navigation -->
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
     <!-- Home Section -->
-    <section id="home">
-      <div class="title-group">
-        <h1>Custom Title Here</h1>
-        <h2>Welcome to the website</h2>
+    <div class="welcome-section" id="home">
+      <div class="welcome-card" id="welcome-card" onclick="toggleAnimation()">
+        <h5>Welcome to:</h5>
+        <h2>Yanuwar's Github Vault</h2>
       </div>
-    </section>
-    <!-- About Section -->
-    <section id="about">
-      <h1>Undraw Illustration</h1>
-      <div class="about-container" id="about-image">
-        <div class="image-container">
-          <h2>Web Innovation</h2>
-          <img
-            src="img/undraw_proud_coder_light.svg"
-            alt="Feeling Proud"
-            id="image1"
-          />
-        </div>
-        <div class="image-container">
-          <h2>Problem Solving</h2>
-          <img
-            src="img/undraw_feeling_proud_light.svg"
-            alt="Feeling Proud"
-            id="image2"
-          />
-        </div>
-        <div class="image-container">
-          <h2>Detailed Concept</h2>
-          <img
-            src="img/undraw_conceptual_idea_light.svg"
-            alt="Feeling Proud"
-            id="image3"
-          />
+    </div>
+    <div class="introduction-section">
+      <div class="left-part">
+        <h3>Hi there!</h3>
+        <h4>You made it here</h4>
+        <p>
+          This page used for showcasing various small projects that I've done along my journey of learning a new language or a new framework.
+          Things won't look pretty, since I kinda made this mostly to track my stuff, most of the projects (or maybe all of it) is hosted in github pages, and you're free to visit it through the list below this section. </br>
+        </p>
+        <p>
+          Most of the projects displayed here prolly will be frontend related (since it's easier to host), but I've done some other projects such as Android, Backend or even UI and UX Design (I swear I did, you can contact me directly if you want to know more of it)
+          At the time, I'm still learning and deepen my knowledge on vanilla Javascript, I've tried several framework like React, Vue, and Svelte. 
+        </p>
+      </div>
+      <div class="right-part">
+        <img
+          src="https://i.ibb.co/cQWjwW0/avatar.jpg"
+          alt="avatar"
+          class="profile-photo"
+        />
+        <div class="text-profile">
+          <h3>Yanuwar Ishak</h3>
+          <h4>Software Engineer</h4>
+          <p>
+            I'm a Software Engineer focusing mainly in web development. I do
+            both backend and frontend, but find it doing much better on frontend part </br> (Yeah, I do need to learn backend more).
+          </p>
+          <p>
+          </br>
+            In case you're interested in works that I've done you can visit my portofolio page <a href="www.yanuwar.space/about">here</a>
+          </br></br>
+            You can also find my profile here:
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/yanuwarishak">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yanuwar-ishak/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/yanuwarishak">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC-bcZ3seq6f8W_v6qTwU6mQ">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.hackerrank.com/yanuwarishak?hr_r=1">
+              <i class="fab fa-hackerrank"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Project Section -->
+    <div class="project-section">
+      <h2>Side Project Lists</h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-preview">
+            <h6>Tech Stack</h6>
+            <h2>React</h2>
+            <h2>SASS</h2>
+            <h2>JavaScript</h2>
+          </div>
+          <div class="project-info">
+            <h6>Chapter 4</h6>
+            <h2>Callbacks & Closures</h2>
+            <a href="yanuwarishak.github.io/monsters-rolodex">
+              <button class="btn">Visit</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Projects Section -->
     <section id="projects">
-      <h1>Buttons</h1>
+      <h1>Color Palette</h1>
       <div class="buttons">
         <button class="primary">Primary</button>
         <button class="secondary">Secondary</button>
@@ -87,16 +127,9 @@
         </p>
       </div>
     </section>
-    <!-- Contact Section -->
+    <!-- Footer Section -->
     <section id="contact">
-      <div class="social-icons">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-codepen"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-medium"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-      </div>
+      <p>Copyright 2021</p>
     </section>
     <!-- Script -->
     <script src="script.js"></script>
