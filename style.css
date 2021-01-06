@@ -19,8 +19,6 @@
   --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 
   /* Card Color */
-  /* --primary: #22d2a0; */
-  /* --secondary: #192824; */
   --green: #1fc11b;
   --yellow: #ffd913;
   --orange: #ff9c55;
@@ -69,9 +67,95 @@ h1 {
 }
 
 h2 {
-  color: var(--on-background-alt);
+  color: var(--on-background);
   font-size: 32px;
   font-weight: normal;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+h5 {
+  margin: 0px;
+  margin-bottom: 5px;
+  color: var(--on-background);
+  font-weight: normal;
+}
+
+/* Sections */
+
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.introduction-section {
+  display: flex;
+  padding: 0 10%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 10vh;
+}
+
+.left-part {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.left-part p{
+  font-size: 16px;
+}
+
+.right-part {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25%;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-profile {
+  margin-top: 15px;
+}
+
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
 }
 
 /* Card */
@@ -112,10 +196,11 @@ h2 {
   }
   20% {
     border: 3px solid var(--red);
-    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary-color),
-      20px -20px 0 -3px var(--background), 20px -20px var(--green),
-      30px -30px 0 -3px var(--background), 30px -30px var(--yellow),
-      40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+    box-shadow: 10px -10px 0 -3px var(--background),
+      10px -10px var(--primary-color), 20px -20px 0 -3px var(--background),
+      20px -20px var(--green), 30px -30px 0 -3px var(--background),
+      30px -30px var(--yellow), 40px -40px 0 -3px var(--background),
+      40px -40px var(--orange);
   }
   40% {
     border: 3px solid var(--orange);
@@ -154,6 +239,15 @@ h2 {
   margin-bottom: 10px;
 }
 
+.welcome-card h5 {
+  color: var(--on-background);
+  font-weight: bold;
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
 .welcome-card h2 {
   font-size: 24px;
   color: var(--on-background);
@@ -179,6 +273,7 @@ h2 {
 }
 
 .project h6 {
+  color: #000000;
   opacity: 0.6;
   margin: 0;
   letter-spacing: 1px;
@@ -186,6 +281,7 @@ h2 {
 }
 
 .project h2 {
+  color: #101010;
   letter-spacing: 1px;
   margin: 10px 0;
 }
@@ -348,8 +444,8 @@ p {
 
 /* Contact Section */
 .fab {
-  font-size: 100px;
-  margin-right: 50px;
+  font-size: 30px;
+  margin-right: 5px;
   cursor: pointer;
   color: var(--on-background);
 }

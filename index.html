@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Home Section -->
     <!-- Dark Mode Switch -->
     <div class="theme-switch-wrapper" onclick="">
       <div class="toggle-icon" id="toggle-icon">
@@ -28,41 +27,86 @@
         <div class="slider round"></div>
       </label>
     </div>
-    <section id="home">
+    <!-- Home Section -->
+    <div class="welcome-section" id="home">
       <div class="welcome-card" id="welcome-card" onclick="toggleAnimation()">
-        <h2>Welcome to the website</h2>
+        <h5>Welcome to:</h5>
+        <h2>Yanuwar's Github Vault</h2>
       </div>
-      <div>
-        <h3>Hi there</h3>
-        <h4>Welcome to my github archives</h4>
+    </div>
+    <div class="introduction-section">
+      <div class="left-part">
+        <h3>Hi there!</h3>
+        <h4>You made it here</h4>
         <p>
-          This page used for showcasing various small projects that I've done
-          and hosted and github pages
+          This page used for showcasing various small projects that I've done along my journey of learning a new language or a new framework.
+          Things won't look pretty, since I kinda made this mostly to track my stuff, most of the projects (or maybe all of it) is hosted in github pages, and you're free to visit it through the list below this section. </br>
         </p>
         <p>
-          If you're interested on checking on my profile you can head to my
-          portofolio site <a href="www.yanuwar.space/about">here</a> or simple
-          github pages <a href="">here</a>
+          Most of the projects displayed here prolly will be frontend related (since it's easier to host), but I've done some other projects such as Android, Backend or even UI and UX Design (I swear I did, you can contact me directly if you want to know more of it)
+          At the time, I'm still learning and deepen my knowledge on vanilla Javascript, I've tried several framework like React, Vue, and Svelte. 
         </p>
       </div>
-    </section>
-    <!-- About Section -->
-    <section id="about">
+      <div class="right-part">
+        <img
+          src="https://i.ibb.co/cQWjwW0/avatar.jpg"
+          alt="avatar"
+          class="profile-photo"
+        />
+        <div class="text-profile">
+          <h3>Yanuwar Ishak</h3>
+          <h4>Software Engineer</h4>
+          <p>
+            I'm a Software Engineer focusing mainly in web development. I do
+            both backend and frontend, but find it doing much better on frontend part </br> (Yeah, I do need to learn backend more).
+          </p>
+          <p>
+          </br>
+            In case you're interested in works that I've done you can visit my portofolio page <a href="www.yanuwar.space/about">here</a>
+          </br></br>
+            You can also find my profile here:
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/yanuwarishak">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yanuwar-ishak/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/yanuwarishak">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC-bcZ3seq6f8W_v6qTwU6mQ">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.hackerrank.com/yanuwarishak?hr_r=1">
+              <i class="fab fa-hackerrank"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Section -->
+    <div class="project-section">
       <h2>Side Project Lists</h2>
       <div class="projects-container">
         <div class="project">
           <div class="project-preview">
-            <h6>project</h6>
-            <h2>JavaScript Fundamentals</h2>
+            <h6>Tech Stack</h6>
+            <h2>React</h2>
+            <h2>SASS</h2>
+            <h2>JavaScript</h2>
           </div>
           <div class="project-info">
             <h6>Chapter 4</h6>
             <h2>Callbacks & Closures</h2>
-            <button class="btn">Visit</button>
+            <a href="yanuwarishak.github.io/monsters-rolodex">
+              <button class="btn">Visit</button>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- Projects Section -->
     <section id="projects">
       <h1>Color Palette</h1>
@@ -83,16 +127,9 @@
         </p>
       </div>
     </section>
-    <!-- Contact Section -->
+    <!-- Footer Section -->
     <section id="contact">
-      <div class="social-icons">
-        <i class="small-icon fab fa-github"></i>
-        <i class="fab fa-codepen"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-medium"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-      </div>
+      <p>Copyright 2021</p>
     </section>
     <!-- Script -->
     <script src="script.js"></script>
